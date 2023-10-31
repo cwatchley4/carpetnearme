@@ -616,7 +616,7 @@ header .main-nav {
   background-image: url("photos/transition-bg.jpg");
   background-position: center;
   background-size: cover;
-  height: 50vh;
+  height: 70vh;
   position: relative;
   text-align: center;
   overflow: hidden;
@@ -636,7 +636,7 @@ header .main-nav {
     font-size: 4.5rem;
   }
   .transition {
-    height: 70vh;
+    height: 80vh;
     background-attachment: fixed;
   }
 }
@@ -1044,6 +1044,8 @@ footer .copyright a:hover {
 
 /* GALLERY PAGE  */
 
+/* Gallery 1 */
+
 .gallery-1 {
   display: flex;
   flex-direction: column;
@@ -1064,11 +1066,15 @@ footer .copyright a:hover {
 .gallery-1 header h2 {
   font-size: 2rem;
   padding: 0 1rem;
+  margin-bottom: 1rem;
 }
 
 .gallery-1 header p {
   max-width: 600px;
-  padding: 0 1rem;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin: 0 1rem;
 }
 
 .gallery-1 .container {
@@ -1188,7 +1194,161 @@ footer .copyright a:hover {
     width: 280px;
     height: 380px;
   }
-  .slider-scrollbar .scrollbar-thumb {
+  .gallery-1 .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+}
+
+/* Gallery 2 */
+
+.gallery-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.gallery-2 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.gallery-2 header h2 {
+  font-size: 2rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-2 header p {
+  max-width: 600px;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.gallery-2 .container {
+  max-width: 1200px;
+  width: 95%;
+}
+
+.gallery-2 .container .slider-wrapper {
+  position: relative;
+}
+
+.gallery-2 .container .slider-wrapper .slider-btn {
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  color: white;
+  background: #174764;
+  font-size: 2;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transform: translateY(-50%);
+}
+
+.gallery-2 .container .slider-wrapper .slider-btn:hover {
+  background: #55778b;
+}
+
+.gallery-2 .container .slider-wrapper .slider-btn i {
+  font-size: 1rem;
+}
+
+.gallery-2 .container .slider-wrapper .slider-btn#prev-slide {
+  left: -20px;
+  display: none;
+}
+
+.gallery-2 .container .slider-wrapper .slider-btn#next-slide {
+  right: -20px;
+}
+
+.gallery-2 .slider-wrapper .image-list {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-bottom: 1rem;
+  font-size: 0;
+}
+
+.gallery-2 .slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-2 .slider-wrapper .image-list .image-item {
+  width: 235px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.gallery-2 .container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.gallery-2 .container .slider-scrollbar .scrollbar-track {
+  height: 2px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  border-radius: 4px;
+}
+
+.gallery-2 .container .slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+
+.gallery-2 .container .slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: black;
+  border-radius: inherit;
+  cursor: grab;
+}
+
+.gallery-2 .container .slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+
+.gallery-2 .container .slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+@media (max-width: 1023px) {
+  .gallery-2 .container .slider-wrapper .slider-btn {
+    display: none !important;
+  }
+
+  .gallery-2 .container .slider-wrapper .slider-btn .image-list {
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .gallery-2 .slider-wrapper .image-list .image-item {
+    width: 280px;
+    height: 380px;
+  }
+  .gallery-2 .slider-scrollbar .scrollbar-thumb {
     width: 20%;
   }
 }
