@@ -76,11 +76,11 @@ if (currentPage === "home") {
 
   /* PARALLAX TRANSITION */
 
-  window.addEventListener("scroll", function () {
-    const parallax = document.querySelector(".transition");
-    const offset = window.scrollY;
-    parallax.style.backgroundPositionY = -offset * 0.5 + "px";
-  });
+  // window.addEventListener("scroll", function () {
+  //   const parallax = document.querySelector(".transition");
+  //   const offset = window.scrollY;
+  //   parallax.style.backgroundPositionY = -offset * 0.2 + "px";
+  // });
 
   /* ACCORDIANS */
 
