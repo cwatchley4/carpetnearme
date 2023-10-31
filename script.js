@@ -2,40 +2,6 @@
 
 const currentPage = document.documentElement.getAttribute("data-page");
 
-/* GOOGLE MAPS API AND REVIEWS WIDGET
-
-const apiKey = "AIzaSyBWVeDdICV-TA_cD31BhHmQq9RG_O3XEWE";
-const placeId = "ChIJ05IRjKHxEQ0RJLV_5NLdK2w";
-
-const apiUrl =
-  "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ05IRjKHxEQ0RJLV_5NLdK2w&fields=reviews&key=AIzaSyBWVeDdICV-TA_cD31BhHmQq9RG_O3XEWE";
-
-// Function to fetch and display reviews
-async function fetchGoogleReviews() {
-  try {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-
-    if (data.result && data.result.reviews) {
-      const reviews = data.result.reviews;
-
-      // Display reviews on your website
-      const reviewsContainer = document.querySelector("reviews-container");
-      reviews.forEach((review) => {
-        const reviewElement = document.createElement("div");
-        reviewElement.textContent = `Rating: ${review.rating}, Review: ${review.text}`;
-        reviewsContainer.appendChild(reviewElement);
-      });
-    }
-  } catch (error) {
-    console.error("Error fetching Google reviews:", error);
-  }
-}
-
-console.log(apiUrl);
-
-*/
-
 /* DROPDOWN MENU NAV */
 
 const toggleBtn = document.querySelector(".toggle-btn");
@@ -106,6 +72,14 @@ if (currentPage === "home") {
 
   closeFurnitureModalBtn.addEventListener("click", function () {
     closeModal(furnitureModal);
+  });
+
+  /* PARALLAX TRANSITION */
+
+  window.addEventListener("scroll", function () {
+    const parallax = document.querySelector(".transition");
+    const offset = window.scrollY;
+    parallax.style.backgroundPositionY = -offset * 0.5 + "px";
   });
 
   /* ACCORDIANS */
