@@ -179,6 +179,7 @@ if (currentPage === "home") {
 // GALLERY PAGE IMAGE SLIDER
 
 if (currentPage === "gallery") {
+  // Slider 1
   const slider = function () {
     const imageList = document.querySelector(".image-list");
     const sliderButtons = document.querySelectorAll(".slider-btn");
@@ -251,5 +252,82 @@ if (currentPage === "gallery") {
     });
   };
 
-  window.addEventListener("load", slider);
+  // Slider 2
+
+  const slider2 = function () {
+    const imageList2 = document.querySelector(".image-list2");
+    const sliderButtons2 = document.querySelectorAll(".slider-btn2");
+    const sliderScrollBar2 = document.querySelector(".slider-scrollbar2");
+    const scrollBarThumb2 = document.querySelector(".scrollbar-thumb2");
+    const maxScrollLeft2 = imageList2.scrollWidth - imageList2.clientWidth;
+
+    // Handle scrollbar thumb drag
+    scrollBarThumb2.addEventListener("mousedown", function (e) {
+      const startX = e.clientX;
+      const thumbPosition = scrollBarThumb2.offsetLeft;
+
+      // Update thumb position on mouse move
+      const handleMouseMove = function (e) {
+        const deltaX = e.clientX - startX;
+        const newThumbPosition = thumbPosition + deltaX;
+        const maxThumbPosition =
+          sliderScrollBar2.getBoundingClientRect().width -
+          scrollBarThumb2.offsetWidth;
+
+        const boundedPosition = Math.max(
+          0,
+          Math.min(maxThumbPosition, newThumbPosition)
+        );
+        const scrollPosition =
+          (boundedPosition / maxThumbPosition) * maxScrollLeft2;
+
+        scrollBarThumb2.style.left = `${boundedPosition}px`;
+        imageList2.scrollLeft = scrollPosition;
+      };
+
+      // Remove event listeners on mouse up
+      const handleMouseUp = function () {
+        document.removeEventListener("mousemove", handleMouseMove);
+        document.removeEventListener("mouseup", handleMouseUp);
+      };
+
+      // Event listeners for drag interaction
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
+    });
+
+    // Slide images according to the slide button clicks
+    sliderButtons2.forEach((button) => {
+      button.addEventListener("click", function () {
+        const direction = button.id === "prev-slide" ? -1 : 1;
+        const scrollAmount = imageList2.clientWidth * direction;
+        imageList2.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+    });
+
+    const handleSlideButtons = function () {
+      sliderButtons2[0].style.display =
+        imageList2.scrollLeft <= 0 ? "none" : "block";
+      sliderButtons2[1].style.display =
+        imageList2.scrollLeft >= maxScrollLeft2 ? "none" : "block";
+    };
+
+    const updateScrollThumbPosition = function () {
+      const scrollPosition = imageList2.scrollLeft;
+      const thumbPosition =
+        (scrollPosition / maxScrollLeft2) *
+        (sliderScrollBar2.clientWidth - scrollBarThumb2.offsetWidth);
+      scrollBarThumb2.style.left = `${thumbPosition}px`;
+    };
+
+    imageList2.addEventListener("scroll", function () {
+      handleSlideButtons();
+      updateScrollThumbPosition();
+    });
+  };
+
+  window.addEventListener("load", function () {
+    slider();
+    slider2();
+  });
 }
