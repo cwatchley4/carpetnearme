@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="206px" height="31px" viewBox="0 0 206 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Phenix_no tag</title>
+    <g id="*-Phenix-R2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Phenix-Product-Section-Landing-Desktop-R2" transform="translate(-617.000000, -82.000000)" fill="#8C827A" fill-rule="nonzero">
+            <g id="Navigation/Desktop/Global-Header/_Standard" transform="translate(0.000000, 48.000000)">
+                <g id="Group" transform="translate(617.030000, 34.230000)">
+                    <path d="M10.4,16.7 C15.94,16.7 19.71,13.83 19.71,9.38 L19.71,9.31 C19.71,4.59 16.01,2.12 10.68,2.12 L2.19,2.12 L2.19,16.7 L10.4,16.7 Z M0,0 L10.81,0 C17.38,0 21.9,3.35 21.9,9.1 L21.9,9.17 C21.9,15.4 16.49,18.68 10.27,18.68 L2.2,18.68 L2.2,29.77 L0.01,29.77 L0.01,0 L0,0 Z" id="Shape"></path>
+                    <polygon id="Path" points="37.84 0 40.03 0 40.03 13.82 59.12 13.82 59.12 0 61.31 0 61.31 29.84 59.12 29.84 59.12 15.88 40.03 15.88 40.03 29.84 37.84 29.84"></polygon>
+                    <polygon id="Path" points="79.58 0 100.8 0 100.8 2.05 81.77 2.05 81.77 13.76 98.88 13.76 98.88 15.81 81.77 15.81 81.77 27.78 101 27.78 101 29.84 79.58 29.84"></polygon>
+                    <polygon id="Path" points="117.49 0 119.55 0 140.14 25.94 140.14 0 142.26 0 142.26 29.84 140.55 29.84 119.61 3.35 119.61 29.84 117.49 29.84"></polygon>
+                    <rect id="Rectangle" x="160.81" y="0" width="2.19" height="29.84"></rect>
+                    <polygon id="Path" points="191.12 14.65 179.7 0 182.3 0 192.49 13.14 202.62 0 205.22 0 193.79 14.58 205.7 29.84 203.03 29.84 192.42 16.08 181.89 29.84 179.29 29.84"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
