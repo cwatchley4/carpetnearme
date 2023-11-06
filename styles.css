@@ -1353,3 +1353,154 @@ footer .copyright a:hover {
     width: 20%;
   }
 }
+
+/* PRODUCTS PAGE */
+
+/* PRODUCT FILTER SECTION */
+
+.product-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin: 0 2rem 2rem;
+}
+
+.product-filter .filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.product-filter .filter-container h2 {
+  margin-bottom: 2rem;
+}
+
+.product-filter .filters {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.product-filter .filters .check {
+  margin: 0.5rem;
+}
+
+.product-filter .filters label {
+  font-family: GoBold;
+  text-transform: uppercase;
+  color: #333;
+  letter-spacing: 1px;
+  margin-left: 0.5rem;
+}
+
+/* PRODUCTS SECTION */
+
+.selected {
+  border: solid 3px;
+  border-color: #174764;
+}
+
+.products {
+  padding: 0 2rem 3rem;
+}
+
+.products .cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.products .cards-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 500px;
+  width: 300px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+.products .cards-container .card .card-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.products .cards-container .card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products .cards-container .card header .card-logo {
+  width: 4rem;
+  height: auto;
+}
+
+.products .cards-container .card header h4 {
+  letter-spacing: normal;
+  color: #666;
+}
+
+.products .cards-container .card .text header {
+  margin-bottom: 1rem;
+}
+
+.products .cards-container .card .text h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.products .cards-container .card .text h4 {
+  font-size: 0.5rem;
+  background-color: #55778b;
+  border-radius: 10px;
+  color: white;
+  padding: 0.35rem;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.products .cards-container .card .text p {
+  font-size: 0.9rem;
+  letter-spacing: normal;
+}
+
+.products .cards-container .card .color-selectors h3 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.products .cards-container .card .color-selectors .colors {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.products .cards-container .card .color-selectors .colors img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.products .cards-container .card .color-selectors .colors img:hover {
+  border: solid 3px;
+  border-color: #174764;
+  cursor: pointer;
+}
