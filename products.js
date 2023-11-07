@@ -30,3 +30,31 @@ cards.forEach(function (card) {
     });
   });
 });
+
+// FILTERS
+
+const checkboxes = document.querySelectorAll(".filter");
+
+// Add an event listener to each checkbox
+checkboxes.forEach(function (checkbox) {
+  checkbox.addEventListener("change", function () {
+    const categoryName = checkbox.getAttribute("name");
+
+    // Check the state of the checkbox
+    if (checkbox.checked) {
+      // Show products that match the category
+      cards.forEach(function (card) {
+        if (card.id === categoryName) {
+          card.style.display = "flex";
+        }
+      });
+    } else {
+      // Hide products that match the category
+      cards.forEach(function (card) {
+        if (card.id === categoryName) {
+          card.style.display = "none";
+        }
+      });
+    }
+  });
+});
