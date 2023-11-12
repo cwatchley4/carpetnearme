@@ -1012,14 +1012,14 @@ footer .copyright a:hover {
 .page-hero .container {
   display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(300px, 500px));
   grid-template-rows: 300px 300px;
   margin: 3rem 0;
 }
 
 .page-hero .container .text {
   background-color: #f0f0f0;
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -1034,12 +1034,37 @@ footer .copyright a:hover {
   background-image: url(photos/about-img1.jpeg);
   background-size: cover;
   border-radius: 10px;
+  height: 300px;
 }
 
 .page-hero .about-img2 {
   background-image: url(photos/about-img2.jpeg);
   background-size: cover;
   border-radius: 10px;
+  height: 300px;
+}
+
+@media (max-width: 705px) {
+  .page-hero .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    margin: 2rem 0 0;
+  }
+  .page-hero .about-img2 {
+    order: -1;
+  }
+}
+
+.history {
+  background-color: #55778b;
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  margin-top: 2rem;
+}
+
+.history h2 {
+  margin-bottom: 1rem;
 }
 
 /* GALLERY PAGE  */
