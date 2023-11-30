@@ -74,13 +74,11 @@ if (currentPage === "home") {
     closeModal(furnitureModal);
   });
 
-  /* PARALLAX TRANSITION */
-
-  // window.addEventListener("scroll", function () {
-  //   const parallax = document.querySelector(".transition");
-  //   const offset = window.scrollY;
-  //   parallax.style.backgroundPositionY = -offset * 0.2 + "px";
-  // });
+  overlay.addEventListener("click", function () {
+    closeModal(estimatesModal);
+    closeModal(haulAwayModal);
+    closeModal(furnitureModal);
+  });
 
   /* ACCORDIANS */
 

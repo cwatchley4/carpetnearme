@@ -19,6 +19,7 @@ html {
 
 body {
   color: #333;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -522,7 +523,7 @@ header .main-nav {
 
 @media (min-width: 875px) {
   .services {
-    padding-top: 4rem;
+    padding: 4rem 2rem 0;
   }
   .services .service-icons {
     grid-template-columns: repeat(3, minmax(245px, 1fr));
@@ -533,7 +534,7 @@ header .main-nav {
 
 @media (min-width: 1100px) {
   .services {
-    padding: 5rem 2rem 1rem;
+    padding: 6rem 2rem 0;
   }
   .services h2 {
     font-size: 3rem;
@@ -545,11 +546,11 @@ header .main-nav {
     gap: 8rem;
     margin: 7rem;
   }
-  .services {
-    padding-top: 6rem;
+  .services .icon {
+    padding: 1.5rem;
   }
   .services .services-cta h3 {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
   .services .services-cta a {
     font-size: 2rem;
@@ -736,16 +737,18 @@ header .main-nav {
 }
 
 @media (min-width: 875px) {
-  .services {
+  .process {
     padding-top: 4rem;
   }
   .process .container {
     gap: 4rem;
-    margin: 4rem 0;
   }
 }
 
 @media (min-width: 1100px) {
+  .process {
+    margin: 5rem 2rem;
+  }
   .process h2 {
     font-size: 3rem;
   }
@@ -1009,15 +1012,24 @@ footer .copyright a:hover {
   margin-bottom: 1rem;
 }
 
-.page-hero .container {
+/* ABOUT PAGE */
+
+.about-mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem 2rem;
+}
+
+.about-mission .container {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(2, minmax(300px, 500px));
   grid-template-rows: 300px 300px;
-  margin: 3rem 0;
 }
 
-.page-hero .container .text {
+.about-mission .container .text {
   background-color: #f0f0f0;
   padding: 2rem;
   border-radius: 10px;
@@ -1026,45 +1038,124 @@ footer .copyright a:hover {
   justify-content: center;
 }
 
-.page-hero .container .text h2 {
+.about-mission .container .text h2 {
   margin-bottom: 1rem;
 }
 
-.page-hero .about-img1 {
+.about-mission .about-img1 {
   background-image: url(photos/about-img1.jpeg);
   background-size: cover;
   border-radius: 10px;
   height: 300px;
 }
 
-.page-hero .about-img2 {
+.about-mission .about-img2 {
   background-image: url(photos/about-img2.jpeg);
   background-size: cover;
   border-radius: 10px;
   height: 300px;
 }
 
-@media (max-width: 705px) {
-  .page-hero .container {
+.about-history {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem 2rem;
+}
+
+.about-history .container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 500px));
+  gap: 2rem;
+}
+
+.about-history .container .text {
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: #55778b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-history h2 {
+  margin-bottom: 1rem;
+}
+
+.about-history .about-img3 {
+  background-image: url(photos/adrian-tiffany2.jpeg);
+  background-size: cover;
+  border-radius: 10px;
+  height: 300px;
+  background-position: 50% 15%;
+}
+
+.about-products {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem 2rem;
+}
+
+.about-products .container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 500px));
+  gap: 2rem;
+}
+
+.about-products .container .text {
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: #55778b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-products h2 {
+  margin-bottom: 1rem;
+}
+
+.about-products a {
+  font-family: "Roboto";
+  letter-spacing: normal;
+  font-weight: 700;
+  color: white;
+  transition: ease 0.2s;
+}
+
+.about-products a:hover {
+  color: #174764;
+}
+
+.about-products .about-img4 {
+  background-image: url(photos/adrian-tiffany2.jpeg);
+  background-size: cover;
+  border-radius: 10px;
+  height: 300px;
+  background-position: 50% 15%;
+}
+
+@media (max-width: 775px) {
+  .about-mission .container {
     grid-template-columns: 1fr;
     grid-template-rows: none;
     margin: 2rem 0 0;
   }
-  .page-hero .about-img2 {
+  .about-mission .about-img2 {
     order: -1;
   }
-}
-
-.history {
-  background-color: #55778b;
-  padding: 2rem;
-  border-radius: 10px;
-  color: white;
-  margin-top: 2rem;
-}
-
-.history h2 {
-  margin-bottom: 1rem;
+  .about-history .container {
+    grid-template-columns: 1fr;
+  }
+  .about-history .about-img3 {
+    order: -1;
+  }
+  .about-products .container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* GALLERY PAGE  */
