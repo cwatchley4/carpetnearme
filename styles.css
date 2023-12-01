@@ -300,7 +300,7 @@ header .main-nav {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-image: url(photos/hero-bg-dark.jpg);
+  background-image: url(photos/hero-bg-dark.webp);
   background-size: cover;
   background-position: center;
   color: white;
@@ -614,7 +614,7 @@ header .main-nav {
 /* TRANSITION - RESIDENTIAL AND COMMERICAL */
 
 .transition {
-  background-image: url("photos/transition-bg.jpg");
+  background-image: url("photos/transition-bg.webp");
   background-position: center;
   background-size: cover;
   height: 70vh;
@@ -1040,14 +1040,14 @@ footer .copyright a:hover {
 }
 
 .about-mission .about-img1 {
-  background-image: url(photos/about-img1.jpeg);
+  background-image: url(photos/about-img1.webp);
   background-size: cover;
   border-radius: 10px;
   height: 300px;
 }
 
 .about-mission .about-img2 {
-  background-image: url(photos/about-img2.jpeg);
+  background-image: url(photos/about-img2.webp);
   background-size: cover;
   border-radius: 10px;
   height: 300px;
@@ -1081,7 +1081,7 @@ footer .copyright a:hover {
 }
 
 .about-history .about-img3 {
-  background-image: url(photos/adrian-tiffany2.jpeg);
+  background-image: url(photos/adrian-tiffany2.webp);
   background-size: cover;
   border-radius: 10px;
   height: 300px;
@@ -1128,7 +1128,7 @@ footer .copyright a:hover {
 }
 
 .about-products .about-img4 {
-  background-image: url(photos/about-img4.jpeg);
+  background-image: url(photos/about-img4.webp);
   background-size: cover;
   border-radius: 10px;
   height: 300px;
