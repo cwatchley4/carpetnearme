@@ -33,8 +33,48 @@
     <!-- Inline Critical CSS -->
     <style>
       /* Critical CSS styles here */
+      html {
+        scroll-behavior: smooth;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
       body {
         font-family: "Roboto", sans-serif; /* Ensure the font is applied immediately */
+        color: #333;
+        -webkit-font-smoothing: antialiased;
+      }
+      @font-face {
+        font-family: "GoBold";
+        src: url("fonts/Gobold\ Regular.otf");
+        font-weight: normal;
+        font-style: normal;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "GoBold";
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-family: "Roboto";
+      }
+
+      a {
+        font-family: "GoBold";
+        letter-spacing: 0.1rem;
+        color: #333;
+      }
+
+      button {
+        cursor: pointer;
       }
     </style>
 
