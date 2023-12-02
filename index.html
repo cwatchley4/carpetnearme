@@ -30,10 +30,30 @@
     <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
     <!-- Google Fonts -->
-    <link defer rel="preconnect" href="https://fonts.googleapis.com" />
-    <link defer rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Inline Critical CSS -->
+    <style>
+      /* Critical CSS styles here */
+      body {
+        font-family: "Roboto", sans-serif; /* Ensure the font is applied immediately */
+      }
+    </style>
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Defer Non-Critical CSS -->
+    <script>
+      window.onload = function () {
+        var stylesheet = document.createElement("link");
+        stylesheet.rel = "stylesheet";
+        stylesheet.href = "path/to/non-critical.css"; // Replace with the actual path
+        document.head.appendChild(stylesheet);
+      };
+    </script>
+
+    <!-- Google Fonts with Display Swap -->
     <link
-      defer
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap"
       rel="stylesheet"
     />
