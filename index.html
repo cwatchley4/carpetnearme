@@ -29,7 +29,6 @@
     <link rel="icon" type="image/svg+xml" sizes="any" href="logos/icon.svg" />
     <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
-    <!-- Google Fonts -->
     <!-- Inline Critical CSS -->
     <style>
       /* Critical CSS styles here */
@@ -43,16 +42,16 @@
         list-style: none;
         box-sizing: border-box;
       }
-      body {
-        font-family: "Roboto", sans-serif; /* Ensure the font is applied immediately */
-        color: #333;
-        -webkit-font-smoothing: antialiased;
-      }
       @font-face {
         font-family: "GoBold";
         src: url("fonts/Gobold\ Regular.otf");
         font-weight: normal;
         font-style: normal;
+      }
+      body {
+        font-family: "Roboto", sans-serif; /* Ensure the font is applied immediately */
+        color: #333;
+        -webkit-font-smoothing: antialiased;
       }
       h1,
       h2,
@@ -62,11 +61,6 @@
         letter-spacing: 0.2rem;
         text-transform: uppercase;
       }
-
-      p {
-        font-family: "Roboto";
-      }
-
       a {
         font-family: "GoBold";
         letter-spacing: 0.1rem;
@@ -81,16 +75,6 @@
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Defer Non-Critical CSS -->
-    <script>
-      window.onload = function () {
-        var stylesheet = document.createElement("link");
-        stylesheet.rel = "stylesheet";
-        stylesheet.href = "path/to/non-critical.css"; // Replace with the actual path
-        document.head.appendChild(stylesheet);
-      };
-    </script>
 
     <!-- Google Fonts with Display Swap -->
     <link
@@ -213,6 +197,7 @@
     <main>
       <!-- HERO SECTION -->
       <section class="hero">
+        <img src="photos/hero-bg-dark.webp" alt="" />
         <h1>
           Welcome to <br />
           <span>Carpet Near Me</span>

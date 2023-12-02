@@ -2,6 +2,14 @@
   display: none;
 }
 
+.action-word-dark {
+  color: #174764;
+}
+
+.action-word-light {
+  color: #a9deff;
+}
+
 /* Main Button */
 
 .btn {
@@ -245,11 +253,17 @@ header .main-nav {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-image: url(photos/hero-bg-dark.webp);
-  background-size: cover;
-  background-position: center;
   color: white;
   text-align: center;
+}
+
+.hero img {
+  object-fit: cover;
+  position: absolute;
+  z-index: -5;
+  overflow: hidden;
+  height: calc(100vh - 80px);
+  width: 100%;
 }
 
 .hero h1 {
