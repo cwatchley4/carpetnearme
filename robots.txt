@@ -1,0 +1,5 @@
+user-agent: *
+Disallow:
+
+Sitemap: https://www.carpetnearme.com/sitemap.xml
+
