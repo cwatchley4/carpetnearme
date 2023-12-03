@@ -1,5 +1,5 @@
 user-agent: *
 Disallow:
 
-Sitemap: https://www.carpetnearme.com/sitemap.xml
+Sitemap: https://carpetnearme.com/sitemap.xml
 
