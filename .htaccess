@@ -1,12 +1,5 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-
-  # Remove ".html" extension from the end of all pages
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.+)\.html$ /$1 [L,R=301]
-
-  # Redirect "/index.html" to "/"
-  RewriteRule ^index\.html$ / [L,R=301]
-</IfModule>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+RewriteRule ^index\.html$ / [L,R=301]
