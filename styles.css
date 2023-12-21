@@ -108,7 +108,15 @@
 
 /* MAIN NAVIGATION */
 
-header .main-nav {
+.main-header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.main-header .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -186,7 +194,7 @@ header .main-nav {
 }
 
 .mobile-nav.open {
-  height: calc(100% - 80px);
+  height: 500px;
   padding: 2rem;
 }
 
@@ -247,14 +255,15 @@ header .main-nav {
 /* HERO */
 
 .hero {
-  height: calc(100vh - 80px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding-top: 80px;
   color: white;
   text-align: center;
+  position: relative;
 }
 
 .hero img {
