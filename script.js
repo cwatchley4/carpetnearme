@@ -26,58 +26,41 @@ toggleBtn.addEventListener("click", function () {
 /* SERVICES MODALS */
 
 if (currentPage === "home") {
-  const estimatesModal = document.querySelector(".modal-estimates");
-  const haulAwayModal = document.querySelector(".modal-haul");
-  const furnitureModal = document.querySelector(".modal-furniture");
-  const closeEstimatesModalBtn = document.querySelector(".modal-estimates i");
-  const closeHaulModalBtn = document.querySelector(".modal-haul i");
-  const closeFurnitureModalBtn = document.querySelector(".modal-furniture i");
-  const estimatesLearnMoreBtn = document.querySelector("#estimates-btn");
-  const haulLearnMoreBtn = document.querySelector("#haul-btn");
-  const furnitureLearnMoveBtn = document.querySelector("#furniture-btn");
   const overlay = document.querySelector(".overlay");
+  const servicesModal = document.querySelectorAll(".modal");
+  const servicesModalBtn = document.querySelectorAll(".modal-btn");
+  const servicesCloseModalBtn = document.querySelectorAll(".modal i");
 
-  const openModal = function (modal) {
+  const openModal = (modal) => {
     if (modal.classList.contains("hidden")) modal.classList.remove("hidden");
     if (overlay.classList.contains("hidden"))
       overlay.classList.remove("hidden");
     document.querySelector("body").style.overflow = "hidden";
   };
 
-  const closeModal = function (modal) {
+  const closeModal = (modal) => {
     if (!modal.classList.contains("hidden")) modal.classList.add("hidden");
     if (!overlay.classList.contains("hidden")) overlay.classList.add("hidden");
     document.querySelector("body").style.overflow = "";
   };
 
-  estimatesLearnMoreBtn.addEventListener("click", function () {
-    openModal(estimatesModal);
-  });
-
-  haulLearnMoreBtn.addEventListener("click", function () {
-    openModal(haulAwayModal);
-  });
-
-  furnitureLearnMoveBtn.addEventListener("click", function () {
-    openModal(furnitureModal);
-  });
-
-  closeEstimatesModalBtn.addEventListener("click", function () {
-    closeModal(estimatesModal);
-  });
-
-  closeHaulModalBtn.addEventListener("click", function () {
-    closeModal(haulAwayModal);
-  });
-
-  closeFurnitureModalBtn.addEventListener("click", function () {
-    closeModal(furnitureModal);
-  });
-
-  overlay.addEventListener("click", function () {
-    closeModal(estimatesModal);
-    closeModal(haulAwayModal);
-    closeModal(furnitureModal);
+  servicesModal.forEach((modal) => {
+    servicesModalBtn.forEach((learnMoreBtn) => {
+      learnMoreBtn.addEventListener("click", function () {
+        openModal(modal);
+      });
+    });
+    servicesCloseModalBtn.forEach((closeBtn) => {
+      closeBtn.addEventListener("click", function () {
+        closeModal(modal);
+      });
+    });
+    overlay.addEventListener("click", function () {
+      closeModal(modal);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeModal(modal);
+    });
   });
 
   /* ACCORDIANS */

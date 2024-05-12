@@ -374,7 +374,7 @@
   margin-bottom: 1rem;
 }
 
-.services .icon .icon-btn {
+.services .icon .modal-btn {
   position: relative;
   margin-top: 1rem;
   background-color: #174764;
@@ -388,7 +388,7 @@
   overflow: hidden;
 }
 
-.services .icon .icon-btn:hover {
+.services .icon .modal-btn:hover {
   background-color: #55778b;
   transform: scale(1.05);
 }
@@ -426,9 +426,7 @@
   z-index: 2;
 }
 
-.services .modal-estimates,
-.modal-haul,
-.modal-furniture {
+.services .modal {
   position: fixed;
   width: 70vw;
   height: auto;
@@ -443,9 +441,7 @@
   z-index: 3;
 }
 
-.services .modal-estimates i,
-.modal-haul i,
-.modal-furniture i {
+.services .modal i {
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -453,17 +449,13 @@
   cursor: pointer;
 }
 
-.services .modal-estimates h3,
-.modal-haul h3,
-.modal-furniture h3 {
+.services .modal h3 {
   text-transform: uppercase;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
 }
 
-.services .modal-estimates p,
-.modal-haul p,
-.modal-furniture p {
+.services .modal p {
   padding-top: 1rem;
 }
 
