@@ -33,14 +33,16 @@ if (currentPage === "home") {
 
   const openModal = (modal) => {
     if (modal.classList.contains("hidden")) modal.classList.remove("hidden");
-    if (overlay.classList.contains("hidden"))
-      overlay.classList.remove("hidden");
+    overlay.style.opacity = 100;
+    overlay.style.zIndex = 2;
+
     document.querySelector("body").style.overflow = "hidden";
   };
 
   const closeModal = (modal) => {
     if (!modal.classList.contains("hidden")) modal.classList.add("hidden");
-    if (!overlay.classList.contains("hidden")) overlay.classList.add("hidden");
+    overlay.style.opacity = 0;
+    overlay.style.zIndex = 0;
     document.querySelector("body").style.overflow = "";
   };
 
