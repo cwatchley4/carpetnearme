@@ -7,6 +7,9 @@ const currentPage = document.documentElement.getAttribute("data-page");
 const toggleBtn = document.querySelector(".toggle-btn");
 const toggleBtnIcon = document.querySelector(".toggle-btn i");
 const mobileNav = document.querySelector(".mobile-nav");
+const hero = document.querySelector(".hero");
+const pageHero = document.querySelector(".page-hero");
+const mainHeader = document.querySelector(".main-header");
 
 const toggleMobileNav = function () {
   mobileNav.classList.toggle("open");
@@ -22,6 +25,28 @@ toggleBtn.addEventListener("click", function () {
   changeToggleBtnIcon();
   console.log("clicked");
 });
+
+const headerHeight = mainHeader.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting === true) {
+    mainHeader.classList.add("sticky");
+  } else {
+    mainHeader.classList.remove("sticky");
+  }
+};
+
+const navObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${headerHeight}px`,
+});
+
+if (hero) navObserver.observe(hero);
+if (pageHero) navObserver.observe(pageHero);
 
 /* SERVICES MODALS */
 

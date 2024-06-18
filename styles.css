@@ -109,11 +109,15 @@
 /* MAIN NAVIGATION */
 
 .main-header {
-  position: fixed;
+  position: absolute;
   z-index: 5;
   width: 100%;
   box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.2);
   background-color: white;
+}
+
+.main-header.sticky {
+  position: fixed;
 }
 
 .main-header .main-nav {
@@ -939,7 +943,8 @@ footer .copyright a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem 2rem;
+  padding: 0 2rem 3rem;
+  padding-top: calc(80px + 3rem);
 }
 
 .page-hero header {
