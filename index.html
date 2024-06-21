@@ -190,7 +190,10 @@
           </li>
         </div>
         <div class="call-to-action">
-          <a href="tel:7797775635" class="btn"><span>(779) 777-5635</span></a>
+          <a href="tel:7797775635" class="btn"
+            ><p class="text-call">Text or Call</p>
+            <span>(779) 777-5635</span></a
+          >
         </div>
         <div class="toggle-btn">
           <i class="fa-solid fa-bars"></i>
@@ -223,18 +226,84 @@
     <main>
       <!-- HERO SECTION -->
       <section class="hero">
-        <img src="photos/hero-bg-dark.webp" alt="" />
-        <h1>
-          Welcome to <br />
-          <span>Carpet Near Me</span>
-        </h1>
-        <p>Carpet Installation in Dekalb, IL and Chicagoland</p>
-        <a
-          href="https://book.appointment-plus.com/dbmtx8qx"
-          target="_blank"
-          class="btn"
-          ><span>Book Online</span></a
-        >
+        <div class="hero_header">
+          <h1>
+            Welcome to <br />
+            <span>Carpet Near Me</span>
+          </h1>
+        </div>
+        <div class="hero-container">
+          <div class="hero-container-info">
+            <p>Carpet Installation in Dekalb, IL and Chicagoland</p>
+
+            <!-- <a
+              href="https://book.appointment-plus.com/dbmtx8qx"
+              target="_blank"
+              class="btn"
+              ><span>Book Online</span></a
+            > -->
+          </div>
+          <div class="hero-container-request">
+            <div class="contact-form-container">
+              <h2>Request Estimate</h2>
+              <form
+                action="https://formsubmit.co/3bc5186d23dd5982b8ffe9f502f9e9d8"
+                method="POST"
+                class="contact-form"
+                id="contact"
+              >
+                <div class="contact-form-field">
+                  <input
+                    type="text"
+                    class="contact-form-input"
+                    name="name"
+                    id="name"
+                    placeholder="Enter Your Name"
+                    required
+                  />
+                </div>
+                <div class="contact-form-field">
+                  <input
+                    type="text"
+                    class="contact-form-input"
+                    name="email"
+                    id="email"
+                    required
+                    placeholder="Enter Your Email"
+                  />
+                </div>
+                <div class="contact-form-field">
+                  <input
+                    type="text"
+                    class="contact-form-input"
+                    name="phone"
+                    id="phone"
+                    required
+                    placeholder="Enter Your Phone Number"
+                  />
+                </div>
+                <div class="contact-form-field">
+                  <select
+                    name="product"
+                    id="product"
+                    class="contact-form-input"
+                    required
+                  >
+                    <option value="select" disabled selected>
+                      Select Product
+                    </option>
+                    <option value="carpet">Carpet</option>
+                    <option value="luxury-vinyl-plank">
+                      Luxury Vinyl Plank
+                    </option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn"><span>Submit</span></button>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- SERVICES SECTION -->
       <div class="overlay"></div>
