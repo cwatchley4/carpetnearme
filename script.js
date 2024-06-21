@@ -67,7 +67,7 @@ if (currentPage === "home") {
   const closeModal = (modal) => {
     if (!modal.classList.contains("hidden")) modal.classList.add("hidden");
     overlay.style.opacity = 0;
-    overlay.style.zIndex = 0;
+    overlay.style.zIndex = -1;
     document.querySelector("body").style.overflow = "";
   };
 
