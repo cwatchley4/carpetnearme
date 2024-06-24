@@ -48,29 +48,68 @@ const navObserver = new IntersectionObserver(stickyNav, {
 if (hero) navObserver.observe(hero);
 if (pageHero) navObserver.observe(pageHero);
 
-/* SERVICES MODALS */
+/* HERO REQUEST FORM */
+const requestFormInputs = document.querySelectorAll(".request-form-input");
+const requestSubmitBtn = document.querySelector(".request-submit");
 
-if (currentPage === "home") {
-  const overlay = document.querySelector(".overlay");
-  const servicesModal = document.querySelectorAll(".modal");
-  const servicesModalBtn = document.querySelectorAll(".modal-btn");
-  const servicesCloseModalBtn = document.querySelectorAll(".modal i");
+console.log(requestFormInputs.length);
 
-  const openModal = (modal) => {
-    if (modal.classList.contains("hidden")) modal.classList.remove("hidden");
-    overlay.style.opacity = 100;
-    overlay.style.zIndex = 2;
+document.addEventListener("DOMContentLoaded", function () {
+  requestFormInputs.forEach((input, index) => {
+    input.addEventListener("input", function () {
+      if (input.value.trim() !== "") {
+        const nextInput = requestFormInputs[index + 1];
+        if (nextInput) {
+          nextInput.classList.remove("hidden");
+        }
+        if (nextInput === requestFormInputs[4]) {
+          requestSubmitBtn.classList.remove("hidden");
+        }
+      }
+    });
+  });
+});
 
-    document.querySelector("body").style.overflow = "hidden";
-  };
+/* MODALS */
 
-  const closeModal = (modal) => {
-    if (!modal.classList.contains("hidden")) modal.classList.add("hidden");
-    overlay.style.opacity = 0;
-    overlay.style.zIndex = -1;
-    document.querySelector("body").style.overflow = "";
-  };
+const overlay = document.querySelector(".overlay");
+const servicesModal = document.querySelectorAll(".modal");
+const servicesModalBtn = document.querySelectorAll(".modal-btn");
+const servicesCloseModalBtn = document.querySelectorAll(".modal i");
+// const requestBtn = document.querySelector(".request-btn");
+// const submitBtn = document.querySelector(".submit-btn");
+// const requestModal = document.querySelector("#request-form");
 
+const openModal = (modal) => {
+  if (modal.classList.contains("hidden")) modal.classList.remove("hidden");
+  overlay.style.opacity = 100;
+  overlay.style.zIndex = 2;
+
+  document.querySelector("body").style.overflow = "hidden";
+};
+
+const closeModal = (modal) => {
+  if (!modal.classList.contains("hidden")) modal.classList.add("hidden");
+  overlay.style.opacity = 0;
+  overlay.style.zIndex = -1;
+  document.querySelector("body").style.overflow = "";
+};
+
+// REQUEST ESTIMATE MODAL
+/*
+if (requestModal) {
+  requestBtn.addEventListener("click", function () {
+    openModal(requestModal);
+  });
+  submitBtn.addEventListener("click", closeModal(requestModal));
+} else {
+  console.warn("Request modal not found!");
+}
+*/
+
+// SERVICES MODALS
+
+if (servicesModal) {
   servicesModal.forEach((modal) => {
     servicesModalBtn.forEach((learnMoreBtn) => {
       learnMoreBtn.addEventListener("click", function () {

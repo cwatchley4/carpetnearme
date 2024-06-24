@@ -94,11 +94,6 @@
         letter-spacing: 0.2rem;
         text-transform: uppercase;
       }
-      a {
-        font-family: "GoBold";
-        letter-spacing: 0.1rem;
-        color: #333;
-      }
 
       button {
         cursor: pointer;
@@ -168,32 +163,28 @@
     <!-- MAIN NAVIGATION -->
     <header class="main-header">
       <nav class="main-nav">
-        <div class="phone-icon">
-          <a href="tel:7797775635"><i class="fa-solid fa-phone"></i></a>
-        </div>
         <div class="logo">
           <a href="/"
             ><img src="logos/logo.svg" alt="The Carpet Near Me Logo"
           /></a>
         </div>
-        <div class="links">
-          <li class="link">
-            <a href="/"><span class="current-page">Home</span></a>
-          </li>
-          <li class="link"><a href="about">About</a></li>
-          <li class="link"><a href="products">Products</a></li>
-          <li class="link"><a href="gallery">Gallery</a></li>
-          <li class="link">
-            <a href="https://book.appointment-plus.com/dbmtx8qx" target="_blank"
-              >Book Online</a
-            >
-          </li>
+        <div class="links_container">
+          <div class="links_left">
+            <a href="/"><span class="current-page link">Home</span></a>
+            <a href="about" class="link">About</a>
+            <a href="products" class="link">Products</a>
+            <a href="gallery" class="link">Gallery</a>
+          </div>
+          <div class="links_right">
+            <a href="#" class="link">Book Online</a>
+            <a href="#" class="link">Request Estimate</a>
+          </div>
         </div>
         <div class="call-to-action">
-          <a href="tel:7797775635" class="btn"
-            ><p class="text-call">Text or Call</p>
-            <span>(779) 777-5635</span></a
-          >
+          <a href="tel:7797775635" class="btn">(779) 777-5635</a>
+        </div>
+        <div class="phone-icon">
+          <a href="tel:7797775635"><i class="fa-solid fa-phone"></i></a>
         </div>
         <div class="toggle-btn">
           <i class="fa-solid fa-bars"></i>
@@ -201,25 +192,15 @@
       </nav>
       <nav class="mobile-nav">
         <div class="links">
-          <li class="link">
-            <a href="/"><span class="current-page">Home</span></a>
-          </li>
+          <a href="/"><span class="current-page link">Home</span></a>
           <hr />
-          <li class="link"><a href="about">About</a></li>
+          <a href="about" class="link">About</a>
           <hr />
-          <li class="link"><a href="products">Products</a></li>
+          <a href="products" class="link">Products</a>
           <hr />
-          <li class="link"><a href="gallery">Gallery</a></li>
+          <a href="gallery" class="link">Gallery</a>
           <hr />
-          <li class="link">
-            <a href="https://book.appointment-plus.com/dbmtx8qx" target="_blank"
-              >Book Online</a
-            >
-          </li>
-          <hr />
-          <li class="btn">
-            <a href="tel:7797775635"><span>(779) 777-5635</span></a>
-          </li>
+          <a href="tel:7797775635" class="btn"><span>(779) 777-5635</span></a>
         </div>
       </nav>
     </header>
@@ -228,80 +209,72 @@
       <section class="hero">
         <div class="hero_header">
           <h1>
-            Welcome to <br />
-            <span>Carpet Near Me</span>
+            <span class="action-word-light">Flooring Installation</span><br />
+            in Dekalb, IL and Chicagoland
           </h1>
+          <p>
+            We install carpet, luxury vinyl plank, and laminate flooring with a
+            one-year labor warranty. As an owner-operated business, Carpet Near
+            Me ensures top-quality service for your project.
+          </p>
         </div>
-        <div class="hero-container">
-          <div class="hero-container-info">
-            <p>Carpet Installation in Dekalb, IL and Chicagoland</p>
-
-            <!-- <a
-              href="https://book.appointment-plus.com/dbmtx8qx"
-              target="_blank"
-              class="btn"
-              ><span>Book Online</span></a
-            > -->
-          </div>
-          <div class="hero-container-request">
-            <div class="contact-form-container">
-              <h2>Request Estimate</h2>
-              <form
-                action="https://formsubmit.co/3bc5186d23dd5982b8ffe9f502f9e9d8"
-                method="POST"
-                class="contact-form"
-                id="contact"
-              >
-                <div class="contact-form-field">
-                  <input
-                    type="text"
-                    class="contact-form-input"
-                    name="name"
-                    id="name"
-                    placeholder="Enter Your Name"
-                    required
-                  />
-                </div>
-                <div class="contact-form-field">
-                  <input
-                    type="text"
-                    class="contact-form-input"
-                    name="email"
-                    id="email"
-                    required
-                    placeholder="Enter Your Email"
-                  />
-                </div>
-                <div class="contact-form-field">
-                  <input
-                    type="text"
-                    class="contact-form-input"
-                    name="phone"
-                    id="phone"
-                    required
-                    placeholder="Enter Your Phone Number"
-                  />
-                </div>
-                <div class="contact-form-field">
-                  <select
-                    name="product"
-                    id="product"
-                    class="contact-form-input"
-                    required
-                  >
-                    <option value="select" disabled selected>
-                      Select Product
-                    </option>
-                    <option value="carpet">Carpet</option>
-                    <option value="luxury-vinyl-plank">
-                      Luxury Vinyl Plank
-                    </option>
-                  </select>
-                </div>
-
-                <button type="submit" class="btn"><span>Submit</span></button>
-              </form>
-            </div>
+        <div class="hero_request">
+          <div class="request-form-container" id="request-form">
+            <h2>Request an Estimate</h2>
+            <form
+              action="https://formsubmit.co/3bc5186d23dd5982b8ffe9f502f9e9d8"
+              method="POST"
+              class="request-form"
+              id="request"
+            >
+              <div class="request-form-field">
+                <input
+                  type="text"
+                  class="request-form-input"
+                  name="name"
+                  id="name"
+                  placeholder="Enter Your Name"
+                  required
+                />
+              </div>
+              <div class="request-form-field">
+                <input
+                  type="text"
+                  class="request-form-input hidden"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="Enter Your Email"
+                />
+              </div>
+              <div class="request-form-field">
+                <input
+                  type="text"
+                  class="request-form-input hidden"
+                  name="phone"
+                  id="phone"
+                  required
+                  placeholder="Enter Your Phone Number"
+                />
+              </div>
+              <div class="request-form-field">
+                <select
+                  name="product"
+                  id="product"
+                  class="request-form-input hidden"
+                  required
+                >
+                  <option value="select" disabled selected>
+                    Select Product
+                  </option>
+                  <option value="carpet">Carpet</option>
+                  <option value="luxury-vinyl-plank">Luxury Vinyl Plank</option>
+                </select>
+              </div>
+              <button class="btn request-submit hidden" type="submit">
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </section>
@@ -365,7 +338,7 @@
           </div>
         </div>
         <div class="services-cta">
-          <h3>Ready to Update Your Carpet?</h3>
+          <h3>Book a Free Assessment Online</h3>
           <a
             href="https://book.appointment-plus.com/dbmtx8qx"
             class="btn-inv"
