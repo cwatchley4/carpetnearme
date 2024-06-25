@@ -48,28 +48,6 @@ const navObserver = new IntersectionObserver(stickyNav, {
 if (hero) navObserver.observe(hero);
 if (pageHero) navObserver.observe(pageHero);
 
-/* HERO REQUEST FORM */
-const requestFormInputs = document.querySelectorAll(".request-form-input");
-const requestSubmitBtn = document.querySelector(".request-submit");
-
-console.log(requestFormInputs.length);
-
-document.addEventListener("DOMContentLoaded", function () {
-  requestFormInputs.forEach((input, index) => {
-    input.addEventListener("input", function () {
-      if (input.value.trim() !== "") {
-        const nextInput = requestFormInputs[index + 1];
-        if (nextInput) {
-          nextInput.classList.remove("hidden");
-        }
-        if (nextInput === requestFormInputs[4]) {
-          requestSubmitBtn.classList.remove("hidden");
-        }
-      }
-    });
-  });
-});
-
 /* MODALS */
 
 const overlay = document.querySelector(".overlay");

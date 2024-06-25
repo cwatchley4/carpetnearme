@@ -130,6 +130,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   height: 75px;
   gap: 2rem;
   padding: 0 1.5rem;
@@ -144,8 +145,8 @@
 }
 
 .main-nav .logo img {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
 }
 
 .main-nav .links_container {
@@ -175,6 +176,7 @@
 
 .links_right .link {
   font-weight: 500;
+  font-size: 14px;
 }
 
 .main-nav .links_left .current-page {
@@ -276,7 +278,6 @@
 
 @media (max-width: 1050px) {
   .main-nav .links_left,
-  .main-nav .links_right,
   .main-nav .call-to-action {
     display: none;
   }
@@ -302,22 +303,29 @@
   }
 }
 
+@media (max-width: 430px) {
+  #nav-request-btn {
+    display: none;
+  }
+}
+
 /* HERO */
 
 .hero {
-  height: 100vh;
+  height: 100%;
   background-image: url(photos/hero-bg-dark.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
   padding-top: calc(80px + 1.5rem);
   padding-left: 3rem;
   padding-right: 3rem;
+  padding-bottom: 1.5rem;
   color: white;
   text-align: center;
 }
@@ -361,7 +369,7 @@
   color: white;
 }
 
-.hero span {
+.hero h1 span {
   font-size: 3rem;
 }
 
@@ -373,8 +381,12 @@
 
 .hero p {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   text-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.1);
+}
+
+.hero p span {
+  font-weight: 700;
 }
 
 .hero .btn {
