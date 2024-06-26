@@ -1316,7 +1316,6 @@ footer .copyright a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
 }
 
 .gallery-1 header {
@@ -1830,6 +1829,7 @@ footer .copyright a:hover {
   margin: 0 2rem;
   color: white;
   border-radius: 10px;
+  text-align: center;
 }
 
 .book-online {
@@ -1837,8 +1837,36 @@ footer .copyright a:hover {
   margin: 0 2rem;
   color: white;
   border-radius: 10px;
+  text-align: center;
 }
 
 .header_tag {
   text-align: center;
+}
+
+/* CARPET PAGE */
+
+.brands {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 2rem;
+}
+
+.brands h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.brands_container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.brand {
+  width: 12rem;
 }
