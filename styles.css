@@ -1,3 +1,8 @@
+:root {
+  --light-gradient: linear-gradient(to bottom right, #174764, #55778b);
+  --dark-gradient: linear-gradient(to bottom right, #4a6b80, #2e4552);
+}
+
 .hidden {
   display: none !important;
 }
@@ -14,6 +19,58 @@
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+/* General Page Styles */
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  padding-top: calc(80px + 3rem);
+}
+
+.page-hero header {
+  background: linear-gradient(to bottom right, #174764, #55778b);
+  width: 100%;
+  height: 15rem;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-hero header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.page-section {
+  padding: 2rem;
+}
+
+.page-section:last-child {
+  margin-bottom: 2rem;
+}
+
+.page-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* Main Button */
@@ -77,6 +134,8 @@
   padding: 1rem 1.2rem;
   display: inline-block;
   border: none;
+  font-family: GoBold;
+  letter-spacing: 2px;
   overflow: hidden;
   transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   z-index: 1;
@@ -1102,36 +1161,6 @@ footer .copyright a:hover {
   }
 }
 
-/* ----- PAGE HERO - All pages besides home have the same styles ----- */
-
-.page-hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 2rem 3rem;
-  padding-top: calc(80px + 3rem);
-}
-
-.page-hero header {
-  background: linear-gradient(to bottom right, #174764, #55778b);
-  width: 100%;
-  height: 15rem;
-  padding: 2rem;
-  text-align: center;
-  color: white;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.page-hero header h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
 /* ABOUT PAGE */
 
 .about-mission {
@@ -1792,4 +1821,24 @@ footer .copyright a:hover {
   border: solid 3px;
   border-color: #174764;
   cursor: pointer;
+}
+
+/* ESTIMATES PAGE */
+
+.request {
+  background: var(--light-gradient);
+  margin: 0 2rem;
+  color: white;
+  border-radius: 10px;
+}
+
+.book-online {
+  background: var(--light-gradient);
+  margin: 0 2rem;
+  color: white;
+  border-radius: 10px;
+}
+
+.header_tag {
+  text-align: center;
 }
