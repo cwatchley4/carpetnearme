@@ -123,31 +123,37 @@
   <body>
     <header class="main-header">
       <nav class="main-nav">
-        <div class="phone-icon">
-          <a href="tel:7797775635"><i class="fa-solid fa-phone"></i></a>
-        </div>
         <div class="logo">
           <a href="/"
             ><img src="logos/logo.svg" alt="The Carpet Near Me Logo"
           /></a>
         </div>
-        <div class="links">
-          <li class="link"><a href="/">Home</a></li>
-          <li class="link"><a href="about">About</a></li>
-          <li class="link">
-            <a href="products"
-              ><span class="current-page">Products</span></a
-            >
-          </li>
-          <li class="link"><a href="gallery">Gallery</a></li>
-          <li class="link">
-            <a href="https://book.appointment-plus.com/dbmtx8qx" target="_blank"
+        <div class="links_container">
+          <div class="links_left">
+            <a href="/"><span class="current-page link">Home</span></a>
+            <a href="about" class="link">About</a>
+            <!-- <a href="products" class="link">Products</a> -->
+            <a href="carpet" class="link">Carpet</a>
+            <a href="vinyl" class="link">Luxury Vinyl Plank</a>
+            <a href="gallery" class="link">Gallery</a>
+            <a href="reviews" class="link">Reviews</a>
+          </div>
+          <div class="links_right">
+            <a
+              href="https://book.appointment-plus.com/dbmtx8qx"
+              target="_blank"
+              class="link"
+              id="book-online-nav-btn"
               >Book Online</a
             >
-          </li>
+            <a href="estimate" class="link">Request Estimate</a>
+          </div>
         </div>
         <div class="call-to-action">
-          <a href="tel:7797775635" class="btn"><span>(779) 777-5635</span></a>
+          <a href="tel:7797775635" class="btn">(779) 777-5635</a>
+        </div>
+        <div class="phone-icon">
+          <a href="tel:7797775635"><i class="fa-solid fa-phone"></i></a>
         </div>
         <div class="toggle-btn">
           <i class="fa-solid fa-bars"></i>
@@ -155,27 +161,24 @@
       </nav>
       <nav class="mobile-nav">
         <div class="links">
-          <li class="link"><a href="/">Home</a></li>
+          <a href="/"><span class="current-page link">Home</span></a>
+          <a href="about" class="link">About</a>
+          <a href="carpet" class="link">Carpet</a>
+          <a href="vinyl" class="link">Luxury Vinyl Plank</a>
+          <a href="gallery" class="link">Gallery</a>
+          <a href="reviews" class="link">Reviews</a>
           <hr />
-          <li class="link"><a href="about">About</a></li>
-          <hr />
-          <li class="link">
-            <a href="products"
-              ><span class="current-page">Products</span></a
-            >
-          </li>
-          <hr />
-          <li class="link"><a href="gallery">Gallery</a></li>
-          <hr />
-          <li class="link">
-            <a href="https://book.appointment-plus.com/dbmtx8qx" target="_blank"
+          <div class="link-btns">
+            <a
+              href="https://book.appointment-plus.com/dbmtx8qx"
+              target="_blank"
+              class="btn"
+              id="book-online-nav-btn"
               >Book Online</a
             >
-          </li>
-          <hr />
-          <li class="btn">
-            <a href="tel:7797775635"><span>(779) 777-5635</span></a>
-          </li>
+            <a href="estimate" class="btn">Request Estimate</a>
+            <a href="tel:7797775635" class="btn"><span>(779) 777-5635</span></a>
+          </div>
         </div>
       </nav>
     </header>
@@ -230,41 +233,70 @@
       <section class="products">
         <aside class="product-filter">
           <div class="container">
-          <div class="filter-container">
-            <h2>Product Line</h2>
-            <div class="filters">
-              <div class="check">
-              <input type="checkbox" class="filter" name="home-living" id="home-living" checked></input>
-              <label for="home-living">Home Living</label>
-              </div>
-              <div class="check">
-              <input type="checkbox" class="filter" name="cashmere" id="cashmere" checked></input>
-              <label for="cashmere">Cashmere</label>
-              </div>
-              <div class="check">
-              <input type="checkbox" class="filter" name="commercial" id="commercial" checked></input>
-              <label for="commercial">Commerical</label>
-              </div>
-              <div class="check">
-              <input type="checkbox" class="filter" name="designer" id="designer" checked></input>
-              <label for="designer">Designer</label>
-              </div>
-              <div class="check">
-              <input type="checkbox" class="filter" name="carpet-tile" id="carpet-tile" checked></input>
-              <label for="carpet-tile">Carpet Tile</label>
+            <div class="filter-container">
+              <h2>Product Line</h2>
+              <div class="filters">
+                <div class="check">
+                  <input
+                    type="checkbox"
+                    class="filter"
+                    name="home-living"
+                    id="home-living"
+                    checked
+                  />
+                  <label for="home-living">Home Living</label>
+                </div>
+                <div class="check">
+                  <input
+                    type="checkbox"
+                    class="filter"
+                    name="cashmere"
+                    id="cashmere"
+                    checked
+                  />
+                  <label for="cashmere">Cashmere</label>
+                </div>
+                <div class="check">
+                  <input
+                    type="checkbox"
+                    class="filter"
+                    name="commercial"
+                    id="commercial"
+                    checked
+                  />
+                  <label for="commercial">Commerical</label>
+                </div>
+                <div class="check">
+                  <input
+                    type="checkbox"
+                    class="filter"
+                    name="designer"
+                    id="designer"
+                    checked
+                  />
+                  <label for="designer">Designer</label>
+                </div>
+                <div class="check">
+                  <input
+                    type="checkbox"
+                    class="filter"
+                    name="carpet-tile"
+                    id="carpet-tile"
+                    checked
+                  />
+                  <label for="carpet-tile">Carpet Tile</label>
+                </div>
               </div>
             </div>
+            <a
+              href="https://book.appointment-plus.com/dbmtx8qx"
+              class="btn"
+              target="_blank"
+              ><span>Book Online</span></a
+            >
           </div>
-          <a
-            href="https://book.appointment-plus.com/dbmtx8qx"
-            class="btn"
-            target="_blank"
-            ><span>Book Online</span></a
-          >
-        </div>
-      </aside>
+        </aside>
         <div class="cards-container">
-
           <!-- HOME LIVING CARDS -->
 
           <div class="card" id="home-living">
@@ -350,7 +382,8 @@
                 <h4 class="product-line-name">Playtime</h4>
               </header>
               <p>
-                Durable and stain-resistant carpet crafted from 100% PET Polyester, designed to handle life with pets.
+                Durable and stain-resistant carpet crafted from 100% PET
+                Polyester, designed to handle life with pets.
               </p>
             </div>
             <div class="color-selectors">
@@ -411,7 +444,8 @@
                 <h4 class="product-line-name">Bently</h4>
               </header>
               <p>
-                This luxurious carpet is crafted from 100% EverStrand SD Polyester for exceptional softness and durability.
+                This luxurious carpet is crafted from 100% EverStrand SD
+                Polyester for exceptional softness and durability.
               </p>
             </div>
             <div class="color-selectors">
@@ -472,7 +506,8 @@
                 <h4 class="product-line-name">Essentials</h4>
               </header>
               <p>
-                Durable and stain-resistant carpet crafted from 100% PET Polyester, designed to handle life with pets.
+                Durable and stain-resistant carpet crafted from 100% PET
+                Polyester, designed to handle life with pets.
               </p>
             </div>
             <div class="color-selectors">
@@ -533,7 +568,8 @@
                 <h4 class="product-line-name">Monte Vista III</h4>
               </header>
               <p>
-                Experience the rich hues and lasting beauty of this carpet, made from 100% PureColor™ Solution Dyed BCF.
+                Experience the rich hues and lasting beauty of this carpet, made
+                from 100% PureColor™ Solution Dyed BCF.
               </p>
             </div>
             <div class="color-selectors">
@@ -637,7 +673,7 @@
           </div>
 
           <!-- CASHMERE CARDS -->
-          
+
           <div class="card" id="cashmere">
             <!-- Masterful -->
             <header>
@@ -659,7 +695,8 @@
                 <h4>Masterful</h4>
               </header>
               <p>
-                Elevate your space with the unmatched comfort of 100% PureColor™ Soft Solution Dyed carpet.
+                Elevate your space with the unmatched comfort of 100% PureColor™
+                Soft Solution Dyed carpet.
               </p>
             </div>
             <div class="color-selectors">
@@ -720,7 +757,8 @@
                 <h4>Heavenly Touch III</h4>
               </header>
               <p>
-                Elevate your space with the unmatched comfort of 100% PureColor™ Soft Solution Dyed carpet.
+                Elevate your space with the unmatched comfort of 100% PureColor™
+                Soft Solution Dyed carpet.
               </p>
             </div>
             <div class="color-selectors">
@@ -781,7 +819,8 @@
                 <h4>Soft Emotion</h4>
               </header>
               <p>
-                Indulge in the plushness of 100% Foreverfresh UltrasoftTM BCF PET carpet for a cozy, enduring elegance.
+                Indulge in the plushness of 100% Foreverfresh UltrasoftTM BCF
+                PET carpet for a cozy, enduring elegance.
               </p>
             </div>
             <div class="color-selectors">
@@ -845,7 +884,9 @@
                 <h4>City Squares</h4>
               </header>
               <p>
-                Indulge in sustainable luxury with 100% Solution Dyed Envirostrand PET carpet, blending style and eco-consciousness seamlessly.
+                Indulge in sustainable luxury with 100% Solution Dyed
+                Envirostrand PET carpet, blending style and eco-consciousness
+                seamlessly.
               </p>
             </div>
             <div class="color-selectors">
@@ -906,7 +947,9 @@
                 <h4>Grand Slam</h4>
               </header>
               <p>
-                Indulge in sustainable luxury with 100% Solution Dyed Envirostrand PET carpet, blending style and eco-consciousness seamlessly.
+                Indulge in sustainable luxury with 100% Solution Dyed
+                Envirostrand PET carpet, blending style and eco-consciousness
+                seamlessly.
               </p>
             </div>
             <div class="color-selectors">
@@ -967,7 +1010,9 @@
                 <h4>Impact</h4>
               </header>
               <p>
-                Indulge in sustainable luxury with 100% Solution Dyed Envirostrand PET carpet, blending style and eco-consciousness seamlessly.
+                Indulge in sustainable luxury with 100% Solution Dyed
+                Envirostrand PET carpet, blending style and eco-consciousness
+                seamlessly.
               </p>
             </div>
             <div class="color-selectors">
@@ -1028,7 +1073,8 @@
                 <h4>Power Up</h4>
               </header>
               <p>
-                Experience enduring beauty and vibrant color with 100% Solution Dyed Nylon carpet, perfect for lasting elegance.
+                Experience enduring beauty and vibrant color with 100% Solution
+                Dyed Nylon carpet, perfect for lasting elegance.
               </p>
             </div>
             <div class="color-selectors">
@@ -1089,7 +1135,8 @@
                 <h4>Prime 20</h4>
               </header>
               <p>
-                Elevate your space with 100% Pivotal™ PET carpet, combining style and sustainability for a luxurious touch.
+                Elevate your space with 100% Pivotal™ PET carpet, combining
+                style and sustainability for a luxurious touch.
               </p>
             </div>
             <div class="color-selectors">
@@ -1150,7 +1197,8 @@
                 <h4>Superior 20</h4>
               </header>
               <p>
-                Experience opulent softness with 100% Apex SDP Polyester carpet, adding comfort and elegance to your space.
+                Experience opulent softness with 100% Apex SDP Polyester carpet,
+                adding comfort and elegance to your space.
               </p>
             </div>
             <div class="color-selectors">
@@ -1214,7 +1262,8 @@
                 <h4>Artistic</h4>
               </header>
               <p>
-                Enjoy the perfect blend of 75% EverStrand BCF PET and 25% BCF Triexta for a luxurious carpet.
+                Enjoy the perfect blend of 75% EverStrand BCF PET and 25% BCF
+                Triexta for a luxurious carpet.
               </p>
             </div>
             <div class="color-selectors">
@@ -1265,7 +1314,9 @@
                 <h4>Classic Diamond</h4>
               </header>
               <p>
-                Discover the ultimate in durability and beauty with 100% SmartStrand® BCF Triexta carpet for your home.              </p>
+                Discover the ultimate in durability and beauty with 100%
+                SmartStrand® BCF Triexta carpet for your home.
+              </p>
             </div>
             <div class="color-selectors">
               <h3>Colors</h3>
@@ -1325,7 +1376,8 @@
                 <h4>Diamonds</h4>
               </header>
               <p>
-                Experience exceptional softness and eco-friendliness with 100% EverStrand BCF PET carpet for your home.
+                Experience exceptional softness and eco-friendliness with 100%
+                EverStrand BCF PET carpet for your home.
               </p>
             </div>
             <div class="color-selectors">
@@ -1386,7 +1438,8 @@
                 <h4>Manhattan</h4>
               </header>
               <p>
-                Elevate your space with the unmatched comfort of 100% PureColor™ Soft Solution Dyed carpet.
+                Elevate your space with the unmatched comfort of 100% PureColor™
+                Soft Solution Dyed carpet.
               </p>
             </div>
             <div class="color-selectors">
@@ -1447,7 +1500,8 @@
                 <h4>Midtown</h4>
               </header>
               <p>
-                Elevate your space with the unmatched comfort of 100% PureColor™ Soft Solution Dyed carpet.
+                Elevate your space with the unmatched comfort of 100% PureColor™
+                Soft Solution Dyed carpet.
               </p>
             </div>
             <div class="color-selectors">
@@ -1508,7 +1562,8 @@
                 <h4>Modern Decor</h4>
               </header>
               <p>
-                Enjoy the perfect blend of 75% EverStrand BCF PET and 25% BCF Triexta for a luxurious carpet.
+                Enjoy the perfect blend of 75% EverStrand BCF PET and 25% BCF
+                Triexta for a luxurious carpet.
               </p>
             </div>
             <div class="color-selectors">
@@ -1572,7 +1627,8 @@
                 <h4>Echo/Intensity</h4>
               </header>
               <p>
-                Carpet tiles offer versatile and easy-to-install flooring solutions, ideal for commercial spaces.
+                Carpet tiles offer versatile and easy-to-install flooring
+                solutions, ideal for commercial spaces.
               </p>
             </div>
             <div class="color-selectors">
@@ -1599,7 +1655,7 @@
           </div>
         </div>
       </section>
-          
+
       <!-- CONTACT SECTION -->
 
       <section class="contact" id="contact">
@@ -1608,7 +1664,12 @@
           <p>Question? Submit the form below and we will contact you.</p>
         </header>
         <div class="contact-form-container">
-          <form action="https://formsubmit.co/3bc5186d23dd5982b8ffe9f502f9e9d8" method="POST" class="contact-form" id="contact">
+          <form
+            action="https://formsubmit.co/3bc5186d23dd5982b8ffe9f502f9e9d8"
+            method="POST"
+            class="contact-form"
+            id="contact"
+          >
             <div class="contact-form-field">
               <label class="contact-form-label" for="name">Name</label>
               <input

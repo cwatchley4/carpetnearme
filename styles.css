@@ -34,7 +34,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem 3rem;
+  padding: 0 2rem;
   padding-top: calc(80px + 3rem);
 }
 
@@ -42,7 +42,7 @@
   background: linear-gradient(to bottom right, #174764, #55778b);
   width: 100%;
   height: 15rem;
-  padding: 2rem;
+  padding: 0 2rem;
   text-align: center;
   color: white;
   border-radius: 10px;
@@ -78,6 +78,7 @@
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .page-item-bg {
@@ -1196,7 +1197,6 @@ footer .copyright a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 2rem 2rem;
 }
 
 .about-mission .container {
@@ -1238,7 +1238,6 @@ footer .copyright a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 2rem 2rem;
 }
 
 .about-history .container {
@@ -1273,7 +1272,6 @@ footer .copyright a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 2rem 2rem;
 }
 
 .about-products .container {
@@ -1319,7 +1317,6 @@ footer .copyright a:hover {
   .about-mission .container {
     grid-template-columns: 1fr;
     grid-template-rows: none;
-    margin: 2rem 0 0;
   }
   .about-mission .about-img2 {
     order: -1;
@@ -1498,7 +1495,6 @@ footer .copyright a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
 }
 
 .gallery-2 header {
@@ -1659,7 +1655,7 @@ footer .copyright a:hover {
 
 .products aside .container {
   position: sticky;
-  top: 1rem;
+  top: calc(75px + 1rem);
 }
 
 /* PRODUCT FILTER SECTION */
@@ -1880,10 +1876,10 @@ footer .copyright a:hover {
   justify-content: center;
   align-items: center;
   background-color: #e9e9e9;
+  gap: 4rem;
 }
 
 .brands h2 {
-  margin-bottom: 2rem;
   text-align: center;
   font-size: 2rem;
 }
