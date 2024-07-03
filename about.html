@@ -185,7 +185,7 @@
     <main class="page-main">
       <section class="page-hero">
         <header>
-          <h1>Our Story</h1>
+          <h1>About Us</h1>
           <p>Your trusted source for flooring in Dekalb, IL and Chicagoland.</p>
         </header>
       </section>
@@ -245,10 +245,6 @@
             </p>
           </div>
           <div class="about-img3"></div>
-        </div>
-      </section>
-      <section class="about-products page-section">
-        <div class="container">
           <div class="about-img4"></div>
           <div class="text">
             <h2>Our Services</h2>
@@ -258,61 +254,87 @@
               commerical applications. Luxury vinyl plank flooring is a durable
               and stylish synthetic flooring material that mimics the look of
               natural wood, offering a cost-effective and low-maintenance
-              alternative to hardwood. To see more of our products, visit the
-              <a href="products">products</a> page.
+              alternative to hardwood.
             </p>
           </div>
         </div>
       </section>
-      <section class="contact" id="contact">
-        <header>
-          <h2>Contact</h2>
-          <p>Question? Submit the form below and we will contact you.</p>
-        </header>
-        <div class="contact-form-container">
-          <form
-            action="https://formsubmit.co/3bc5186d23dd5982b8ffe9f502f9e9d8"
-            method="POST"
-            class="contact-form"
-            id="contact"
-          >
-            <div class="contact-form-field">
-              <label class="contact-form-label" for="name">Name</label>
-              <input
-                type="text"
-                class="contact-form-input"
-                name="name"
-                id="name"
-                placeholder="Enter Your Name"
-                required
-              />
-            </div>
-            <div class="contact-form-field">
-              <label class="contact-form-label" for="email">Email</label>
-              <input
-                type="text"
-                class="contact-form-input"
-                name="email"
-                id="email"
-                required
-                placeholder="Enter Your Email"
-              />
-            </div>
-            <div class="contact-form-field">
-              <label class="contact-form-label" for="message">Messsage</label>
-              <textarea
-                name="message"
-                id="message"
-                cols="30"
-                rows="10"
-                class="contact-form-input"
-                required
-                placeholder="Enter Your Message"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn"><span>Submit</span></button>
-          </form>
+      <section class="request page-section page-flex">
+        <h2>Request an Estimate</h2>
+        <p class="header_tag">
+          Fill out this contact form and we'll call you to schedule an
+          appointment.
+        </p>
+        <div class="hero_request">
+          <div class="request-form-container" id="request-form">
+            <form
+              action="https://formsubmit.co/3bc5186d23dd5982b8ffe9f502f9e9d8"
+              method="POST"
+              class="request-form"
+              id="request"
+            >
+              <div class="request-form-field">
+                <input
+                  type="text"
+                  class="request-form-input"
+                  name="name"
+                  id="name"
+                  placeholder="Enter Your Name"
+                  required
+                />
+              </div>
+              <div class="request-form-field">
+                <input
+                  type="text"
+                  class="request-form-input"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="Enter Your Email"
+                />
+              </div>
+              <div class="request-form-field">
+                <input
+                  type="text"
+                  class="request-form-input"
+                  name="phone"
+                  id="phone"
+                  required
+                  placeholder="Enter Your Phone Number"
+                />
+              </div>
+              <div class="request-form-field">
+                <select
+                  name="product"
+                  id="product"
+                  class="request-form-input"
+                  required
+                >
+                  <option value="select" disabled selected>
+                    Select Product
+                  </option>
+                  <option value="carpet">Carpet</option>
+                  <option value="luxury-vinyl-plank">Luxury Vinyl Plank</option>
+                </select>
+              </div>
+              <button class="btn request-submit" type="submit">Submit</button>
+            </form>
+          </div>
         </div>
+      </section>
+      <section class="book-online page-section page-flex">
+        <h2>Book an Appointment Online</h2>
+        <p class="header_tag">
+          Pick the best day and time that works with your schedule, and we'll
+          come take a look at your space to give you an estimate. Click the
+          button below to get started.
+        </p>
+        <a
+          href="https://book.appointment-plus.com/dbmtx8qx"
+          target="_blank"
+          class="btn-inv"
+          >Book Online</a
+        >
       </section>
     </main>
     <footer>
