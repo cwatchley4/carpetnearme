@@ -112,73 +112,75 @@ if (servicesModal) {
 
 /* ACCORDION STRUCTURE DEFINITION */
 
-// const accordions = [
-//   {
-//     id: "consultation",
-//     accordion: null,
-//     button: null,
-//     text: null,
-//   },
-//   {
-//     id: "estimates",
-//     accordion: null,
-//     button: null,
-//     text: null,
-//   },
-//   {
-//     id: "installation",
-//     accordion: null,
-//     button: null,
-//     text: null,
-//   },
-//   {
-//     id: "follow-up",
-//     accordion: null,
-//     button: null,
-//     text: null,
-//   },
-// ];
+if (currentPage === "home") {
+  const accordions = [
+    {
+      id: "consultation",
+      accordion: null,
+      button: null,
+      text: null,
+    },
+    {
+      id: "estimates",
+      accordion: null,
+      button: null,
+      text: null,
+    },
+    {
+      id: "installation",
+      accordion: null,
+      button: null,
+      text: null,
+    },
+    {
+      id: "follow-up",
+      accordion: null,
+      button: null,
+      text: null,
+    },
+  ];
 
-//   /* INITIALIZE ACCORDION COMPONENTS */
-//   accordions.forEach((acc) => {
-//     acc.accordion = document.querySelector(`#${acc.id}`);
-//     acc.button = document.querySelector(`#${acc.id} i`);
-//     acc.text = document.querySelector(`#${acc.id} p`);
-//   });
+  /* INITIALIZE ACCORDION COMPONENTS */
+  accordions.forEach((acc) => {
+    acc.accordion = document.querySelector(`#${acc.id}`);
+    acc.button = document.querySelector(`#${acc.id} i`);
+    acc.text = document.querySelector(`#${acc.id} p`);
+  });
 
-//   /* TOGGLE BUTTON ARROW FUNCTION */
-//   const toggleBtnArrow = (text, btn) => {
-//     const isClosed = text.classList.contains("hidden");
-//     btn.className = isClosed
-//       ? "fa-solid fa-chevron-down"
-//       : "fa-solid fa-chevron-up";
-//   };
+  /* TOGGLE BUTTON ARROW FUNCTION */
+  const toggleBtnArrow = (text, btn) => {
+    const isClosed = text.classList.contains("hidden");
+    btn.className = isClosed
+      ? "fa-solid fa-chevron-down"
+      : "fa-solid fa-chevron-up";
+  };
 
-//   /* TOGGLE ACCORDION FUNCTION */
-//   const toggleAccordion = (current) => {
-//     current.text.classList.toggle("hidden");
-//     accordions.forEach((acc) => {
-//       if (acc.id !== current.id) {
-//         acc.text.classList.add("hidden");
-//       }
-//     });
-//     toggleBtnArrow(current.text, current.button);
-//   };
+  /* TOGGLE ACCORDION FUNCTION */
+  const toggleAccordion = (current) => {
+    current.text.classList.toggle("hidden");
+    accordions.forEach((acc) => {
+      if (acc.id !== current.id) {
+        acc.text.classList.add("hidden");
+      }
+    });
+    toggleBtnArrow(current.text, current.button);
+  };
 
-//   /* ATTACH EVENT LISTENERS TO ACCORDION BUTTONS */
-//   accordions.forEach((acc) => {
-//     acc.button.addEventListener("click", () => {
-//       toggleAccordion(acc);
-//       accordions.forEach((otherAcc) =>
-//         toggleBtnArrow(otherAcc.text, otherAcc.button)
-//       );
-//     });
-//   });
+  /* ATTACH EVENT LISTENERS TO ACCORDION BUTTONS */
+  accordions.forEach((acc) => {
+    acc.button.addEventListener("click", () => {
+      toggleAccordion(acc);
+      accordions.forEach((otherAcc) =>
+        toggleBtnArrow(otherAcc.text, otherAcc.button)
+      );
+    });
+  });
+}
 
 // GALLERY PAGE IMAGE SLIDER
 
 // Slider 1
-if (currentPage === "carpet" || "vinly") {
+if (currentPage === "carpet") {
   const slider = function () {
     const imageList = document.querySelector(".image-list");
     const sliderButtons = document.querySelectorAll(".slider-btn");
@@ -250,9 +252,14 @@ if (currentPage === "carpet" || "vinly") {
       updateScrollThumbPosition();
     });
   };
+  window.addEventListener("load", function () {
+    slider();
+  });
+}
 
-  // Slider 2
+// Slider 2
 
+if (currentPage === "vinyl") {
   const slider2 = function () {
     const imageList2 = document.querySelector(".image-list2");
     const sliderButtons2 = document.querySelectorAll(".slider-btn2");
@@ -326,7 +333,6 @@ if (currentPage === "carpet" || "vinly") {
   };
 
   window.addEventListener("load", function () {
-    slider();
     slider2();
   });
 }

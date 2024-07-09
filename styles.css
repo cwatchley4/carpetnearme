@@ -226,7 +226,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 75px;
+  height: 90px;
   gap: 2rem;
   padding: 0 1.5rem;
   overflow: hidden;
@@ -240,8 +240,8 @@
 }
 
 .main-nav .logo img {
-  width: 6rem;
-  height: 6rem;
+  width: 10rem;
+  height: 10rem;
 }
 
 .main-nav .links_container {
@@ -382,7 +382,7 @@
   color: #297cb0;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1120px) {
   .main-nav .links_left,
   .main-nav .call-to-action {
     display: none;
@@ -399,7 +399,7 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 550px) {
   .main-nav {
     gap: 1rem !important;
   }
@@ -407,11 +407,25 @@
     color: #174764;
     font-size: 1.2rem;
   }
+  .main-nav .logo img {
+    height: 8rem;
+    width: 8rem;
+  }
+  .main-nav {
+    height: 80px !important;
+  }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 520px) {
   .main-nav #book-online-nav-btn {
     display: none;
+  }
+  .main-nav .logo img {
+    height: 7.5rem;
+    width: 7.5rem;
+  }
+  .main-nav {
+    height: 70px !important;
   }
 }
 
@@ -428,10 +442,10 @@
   justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
-  padding-top: calc(80px + 1.5rem);
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 1.5rem;
+  padding-top: calc(80px + 3rem);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 3rem;
   color: white;
   text-align: center;
 }
@@ -550,9 +564,19 @@
   border: 2px solid #ebebeb;
   font-size: 16px;
   letter-spacing: 0;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   font-weight: 600;
+}
+
+.hero_request
+  .request-form-container
+  .request-form
+  .request-form-field
+  .request-form-input
+  option {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .hero_request
