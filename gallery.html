@@ -119,6 +119,7 @@
 
       gtag("config", "G-20S9RD5HS3");
     </script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <header class="main-header">
@@ -413,7 +414,95 @@
         © Copyright 2023 Carpet Near Me.<br />Made by
         <a href="https://curtisatchley.com" target="_blank">Curtis Atchley</a>.
       </p>
+      <!-- Facebook Pixel Code -->
+      <script nonce="irQauNkX">
+        !(function (f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod
+              ? n.callMethod.apply(n, arguments)
+              : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = "2.0";
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(
+          window,
+          document,
+          "script",
+          "https://connect.facebook.net/en_US/fbevents.js"
+        );
+
+        fbq("init", "495927239673472");
+        fbq("track", "PageView");
+      </script>
+      <noscript
+        ><img
+          height="1"
+          width="1"
+          style="display: none"
+          src="https://www.facebook.com/tr?id=495927239673472&ev=PageView&noscript=1"
+      /></noscript>
+      <!-- End Facebook Pixel Code -->
     </footer>
-    <script src="script.js"></script>
+    <!-- phone insertion script begins -->
+
+    <script
+      defer
+      type="text/javascript"
+      src="https://reports.hibu.com/analytics/js/ybDynamicPhoneInsertion.js"
+    ></script>
+
+    <script>
+      ybFindPhNums = [
+        "17797775635",
+        "17797775635",
+        "17797775635",
+        "17797775635",
+      ];
+      ybReplacePhNums = [
+        "17792613401",
+        "17792613413",
+        "17792613435",
+        "17792613434",
+      ];
+
+      ybFindPhNumsNoIndx = ["17797775635"];
+      ybReplacePhNumsNoIndx = ["17792610254"];
+
+      document.addEventListener(
+        "YextPhoneChangeEvent",
+        yextPhoneChangeEventHandler,
+        false
+      );
+
+      function yextPhoneChangeEventHandler(e) {
+        e.preventDefault();
+        ybFun_ReplaceText();
+      }
+
+      if (typeof dmAPI != "undefined") {
+        dmAPI.runOnReady("dpni", function () {
+          setTimeout(ybFun_ReplaceText, 500);
+        });
+        dmAPI.subscribeEvent(dmAPI.EVENTS.SHOW_POPUP, function (data) {
+          setTimeout(ybFun_ReplaceText, 500);
+          console.log("dmAPI.EVENTS.SHOW_POPUP" + data);
+        });
+      } else {
+        window.onload = function () {
+          setTimeout(ybFun_ReplaceText, 500);
+        };
+      }
+    </script>
+
+    <!-- phone insertion script ends -->
   </body>
 </html>

@@ -23,14 +23,12 @@ const changeToggleBtnIcon = function () {
 toggleBtn.addEventListener("click", function () {
   toggleMobileNav();
   changeToggleBtnIcon();
-  console.log("clicked");
 });
 
 const headerHeight = mainHeader.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
   const [entry] = entries;
-  console.log(entry);
 
   if (!entry.isIntersecting === true) {
     mainHeader.classList.add("sticky");
