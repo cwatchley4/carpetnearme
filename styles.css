@@ -448,6 +448,26 @@
   padding-bottom: 3rem;
   color: white;
   text-align: center;
+  transition: background-image 1s ease-in-out;
+  position: relative; /* Important: allows the pseudo-element to be positioned relative to the .hero */
+  z-index: 1; /* Ensures the content is above the overlay */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Adjust the opacity value to control the darkness */
+  z-index: -1; /* Places the overlay behind the content */
+  transition: background 1s ease-in-out; /* Smooth transition for the overlay if needed */
 }
 
 .hero_header {

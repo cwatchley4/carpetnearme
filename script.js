@@ -46,15 +46,40 @@ const navObserver = new IntersectionObserver(stickyNav, {
 if (hero) navObserver.observe(hero);
 if (pageHero) navObserver.observe(pageHero);
 
+// HOME PAGE BACKGROUND SLIDER
+
+const photos = [
+  "url(backgrounds/hero-backgrounds/img1.jpg",
+  "url(backgrounds/hero-backgrounds/img2.jpg",
+  "url(backgrounds/hero-backgrounds/img3.jpg",
+  "url(backgrounds/hero-backgrounds/img4.jpg",
+  "url(backgrounds/hero-backgrounds/img5.jpg",
+  "url(backgrounds/hero-backgrounds/img6.jpg",
+  "url(backgrounds/hero-backgrounds/img7.jpg",
+  "url(backgrounds/hero-backgrounds/img8.jpg",
+  "url(backgrounds/hero-backgrounds/img9.jpg",
+  "url(backgrounds/hero-backgrounds/img10.jpg",
+  "url(backgrounds/hero-backgrounds/img11.jpg",
+  "url(backgrounds/hero-backgrounds/img12.jpg",
+  "url(backgrounds/hero-backgrounds/img13.jpg",
+];
+
+let currentPhoto = 0;
+
+const changeBackground = function () {
+  hero.style.backgroundImage = photos[currentPhoto];
+  currentPhoto = (currentPhoto + 1) % photos.length;
+};
+
+setInterval(changeBackground, 5000);
+
+changeBackground();
 /* MODALS */
 
 const overlay = document.querySelector(".overlay");
 const servicesModal = document.querySelectorAll(".modal");
 const servicesModalBtn = document.querySelectorAll(".modal-btn");
 const servicesCloseModalBtn = document.querySelectorAll(".modal i");
-// const requestBtn = document.querySelector(".request-btn");
-// const submitBtn = document.querySelector(".submit-btn");
-// const requestModal = document.querySelector("#request-form");
 
 const openModal = (modal) => {
   if (modal.classList.contains("hidden")) modal.classList.remove("hidden");
@@ -70,18 +95,6 @@ const closeModal = (modal) => {
   overlay.style.zIndex = -1;
   document.querySelector("body").style.overflow = "";
 };
-
-// REQUEST ESTIMATE MODAL
-/*
-if (requestModal) {
-  requestBtn.addEventListener("click", function () {
-    openModal(requestModal);
-  });
-  submitBtn.addEventListener("click", closeModal(requestModal));
-} else {
-  console.warn("Request modal not found!");
-}
-*/
 
 // SERVICES MODALS
 
