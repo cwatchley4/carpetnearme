@@ -75,10 +75,19 @@ const preloadImage = (src) => {
     img.onerror = reject;
   });
 };
-
 // Function to preload all images and return a Promise that resolves when all images are loaded
 const preloadAllImages = (imageArray) => {
   return Promise.all(imageArray.map((src) => preloadImage(src)));
+};
+
+// Append preloaded images to the DOM as hidden elements to keep them in memory
+const keepImagesInMemory = (imageArray) => {
+  imageArray.forEach((src) => {
+    const div = document.createElement("div");
+    div.style.backgroundImage = `url(${src})`;
+    div.style.display = "none"; // Hide the element
+    document.body.appendChild(div);
+  });
 };
 
 // Change background function with smooth transition
@@ -90,6 +99,7 @@ function changeBackground() {
 // Preload images and start the slider once all images are loaded
 preloadAllImages(photos)
   .then(() => {
+    keepImagesInMemory(photos); // Keep images in memory
     setInterval(changeBackground, 5000); // Change image every 5 seconds
     changeBackground(); // Initial background image
   })
