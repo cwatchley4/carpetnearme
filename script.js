@@ -49,31 +49,53 @@ if (pageHero) navObserver.observe(pageHero);
 // HOME PAGE BACKGROUND SLIDER
 
 const photos = [
-  "url(backgrounds/hero-backgrounds/img1.jpg",
-  "url(backgrounds/hero-backgrounds/img2.jpg",
-  "url(backgrounds/hero-backgrounds/img3.jpg",
-  "url(backgrounds/hero-backgrounds/img4.jpg",
-  "url(backgrounds/hero-backgrounds/img5.jpg",
-  "url(backgrounds/hero-backgrounds/img6.jpg",
-  "url(backgrounds/hero-backgrounds/img7.jpg",
-  "url(backgrounds/hero-backgrounds/img8.jpg",
-  "url(backgrounds/hero-backgrounds/img9.jpg",
-  "url(backgrounds/hero-backgrounds/img10.jpg",
-  "url(backgrounds/hero-backgrounds/img11.jpg",
-  "url(backgrounds/hero-backgrounds/img12.jpg",
-  "url(backgrounds/hero-backgrounds/img13.jpg",
+  "backgrounds/hero-backgrounds/img1.jpg",
+  "backgrounds/hero-backgrounds/img2.jpg",
+  "backgrounds/hero-backgrounds/img3.jpg",
+  "backgrounds/hero-backgrounds/img4.jpg",
+  "backgrounds/hero-backgrounds/img5.jpg",
+  "backgrounds/hero-backgrounds/img6.jpg",
+  "backgrounds/hero-backgrounds/img7.jpg",
+  "backgrounds/hero-backgrounds/img8.jpg",
+  "backgrounds/hero-backgrounds/img9.jpg",
+  "backgrounds/hero-backgrounds/img10.jpg",
+  "backgrounds/hero-backgrounds/img11.jpg",
+  "backgrounds/hero-backgrounds/img12.jpg",
+  "backgrounds/hero-backgrounds/img13.jpg",
 ];
 
 let currentPhoto = 0;
 
-const changeBackground = function () {
-  hero.style.backgroundImage = photos[currentPhoto];
-  currentPhoto = (currentPhoto + 1) % photos.length;
+// Function to preload a single image and return a Promise
+const preloadImage = (src) => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = resolve;
+    img.onerror = reject;
+  });
 };
 
-setInterval(changeBackground, 5000);
+// Function to preload all images and return a Promise that resolves when all images are loaded
+const preloadAllImages = (imageArray) => {
+  return Promise.all(imageArray.map((src) => preloadImage(src)));
+};
 
-changeBackground();
+// Change background function with smooth transition
+function changeBackground() {
+  hero.style.backgroundImage = `url(${photos[currentPhoto]})`;
+  currentPhoto = (currentPhoto + 1) % photos.length;
+}
+
+// Preload images and start the slider once all images are loaded
+preloadAllImages(photos)
+  .then(() => {
+    setInterval(changeBackground, 5000); // Change image every 5 seconds
+    changeBackground(); // Initial background image
+  })
+  .catch((error) => {
+    console.error("Image failed to load", error);
+  });
 /* MODALS */
 
 const overlay = document.querySelector(".overlay");
