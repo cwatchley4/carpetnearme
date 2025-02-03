@@ -1,0 +1,38 @@
+[build]
+  publish = "dist"
+
+[[redirects]]
+  from = "/"
+  to = "/src/html/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/src/html/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/carpet"
+  to = "/src/html/carpet.html"
+  status = 200
+
+[[redirects]]
+  from = "/estimate"
+  to = "/src/html/estimate.html"
+  status = 200
+
+[[redirects]]
+  from = "/gallery"
+  to = "/src/html/gallery.html"
+  status = 200
+
+[[redirects]]
+  from = "/reviews"
+  to = "/src/html/reviews.html"
+  status = 200
+
+[[redirects]]
+  from = "/vinyl"
+  to = "/src/html/vinyl.html"
+  status = 200
+

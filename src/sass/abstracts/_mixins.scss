@@ -1,0 +1,16 @@
+@use "./variables" as v;
+
+@mixin layout-hero {
+  padding-top: 90px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 8rem;
+}
+
+@mixin layout-section-padding {
+  padding: 8rem 2rem 0rem;
+}
+
+@mixin layout-section-margin {
+  margin: 8rem 0 0;
+}

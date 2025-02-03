@@ -1,0 +1,22 @@
+@use "../../abstracts/variables" as v;
+@use "../../abstracts/mixins" as m;
+
+.transition {
+  background-image: url("../assets/images/transition-bg.webp");
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  @include m.layout-section-margin;
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: v.$color-white;
+    font-size: 5rem;
+  }
+}

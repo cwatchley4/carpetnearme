@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as v;
+
+.swiper-container {
+  &--hero {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 2;
+      pointer-events: none;
+    }
+  }
+
+  &--gallery {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    color: v.$color-white;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+}
+
+.swiper-img--gallery {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: v.$color-white;
+  width: 50px;
+}

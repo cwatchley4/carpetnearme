@@ -1,0 +1,26 @@
+// Colors
+$color-primary: #174764;
+$color-secondary: #55778b;
+
+$color-grey-light: #f0f0f0;
+$color-white: #fff;
+
+$color-text: #333;
+
+// Gradients
+$gradient-primary: linear-gradient(
+  to bottom right,
+  $color-primary,
+  $color-secondary
+);
+$gradient-light: linear-gradient(to bottom right, #d4f1ff, #8baab8);
+$gradient-dark: linear-gradient(to bottom right, #4a6b80, #2e4552);
+
+// Fonts
+$font-family-primary: "Nunito", sans-serif;
+$font-family-heading: "GoBold", sans-serif;
+
+// Nunito Weights
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-extrabold: 800;

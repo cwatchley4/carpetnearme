@@ -1,0 +1,1 @@
+export const FB_PIXEL_ID = "495927239673472";

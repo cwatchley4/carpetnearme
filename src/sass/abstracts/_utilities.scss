@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as v;
+
+.hidden {
+  display: none !important;
+}
+
+.action-word--dark {
+  background-image: v.$gradient-dark;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.action-word--light {
+  background-image: v.$gradient-light;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.action-word--heavy {
+  font-weight: v.$font-weight-extrabold;
+}

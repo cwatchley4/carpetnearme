@@ -1,0 +1,73 @@
+@use "../../abstracts/variables" as v;
+@use "../../abstracts/mixins" as m;
+
+.process {
+  @include m.layout-section-padding;
+  padding-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.process__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+.process__title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.process__text {
+  max-width: 700px;
+  text-align: center;
+
+  &-description {
+    margin-bottom: 2rem;
+    transition: all 0.2s;
+    background-color: v.$color-grey-light;
+    padding: 1rem;
+    border-radius: 1.5rem;
+  }
+}
+
+.process__accordians {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+}
+
+.process__accordian-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.process__accordian-header-title {
+  font-size: 2rem;
+}
+
+.process__accordian {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: v.$color-primary;
+  color: v.$color-white;
+  border-radius: 10px;
+  height: auto;
+}
+
+.process__accordian-description {
+  margin-top: 1rem;
+}
+
+.process__accordian:last-child {
+  margin-bottom: 0;
+}
+
+.process__accordian-header-icon {
+  cursor: pointer;
+}

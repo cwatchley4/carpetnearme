@@ -1,0 +1,57 @@
+@use "../../abstracts/variables" as v;
+
+.history-services {
+  color: v.$color-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-services__container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(300px, 500px));
+  grid-template-rows: 300px 300px;
+}
+
+.history-services__history,
+.history-services__services {
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: v.$color-secondary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.history-services__history-title,
+.history-services__services-title {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.about__img3 {
+  background-image: url(../assets/images/adrian-and-tiffany.webp);
+  background-size: cover;
+  border-radius: 10px;
+  height: 300px;
+  background-position: 50% 15%;
+}
+
+.about__img4 {
+  background-image: url(../assets/images/about-img4.webp);
+  background-size: cover;
+  border-radius: 10px;
+  height: 300px;
+  background-position: 50% 15%;
+}
+
+@media (max-width: 775px) {
+  .history-services__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+  .about__img3 {
+    order: -1;
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "carpetnearme",
+  "version": "1.0.0",
+  "description": "A website for Carpet Near Me in Dekalb, IL.",
+  "scripts": {
+    "compile:sass": "sass src/sass/main.scss src/css/styles.css -w",
+    "start": "parcel src/html/index.html",
+    "start:about": "parcel src/html/about.html",
+    "start:carpet": "parcel src/html/carpet.html",
+    "start:vinyl": "parcel src/html/vinyl.html",
+    "start:gallery": "parcel src/html/gallery.html",
+    "start:reviews": "parcel src/html/reviews.html",
+    "start:estimate": "parcel src/html/estimate.html",
+    "build": "parcel build src/html/*.html",
+    "clear": "rm -rf .parcel-cache",
+    "ip": "ipconfig getifaddr en0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cwatchley4/carpetnearme.git"
+  },
+  "author": "Curtis Atchley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cwatchley4/carpetnearme/issues"
+  },
+  "homepage": "https://github.com/cwatchley4/carpetnearme#readme",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.13.3",
+    "@parcel/transformer-jsonld": "^2.13.3",
+    "@parcel/transformer-sass": "^2.13.3",
+    "parcel": "^2.13.3",
+    "sass": "^1.83.0",
+    "svgo": "^3.3.2"
+  },
+  "dependencies": {
+    "micromodal": "^0.4.10",
+    "swiper": "^11.2.1"
+  }
+}

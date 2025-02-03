@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as v;
+
+.why-choose-us {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.why-choose-us__title {
+  text-align: center;
+}
+
+.why-choose-us__container {
+  display: grid;
+  gap: 3rem;
+  place-items: center;
+  grid-template-columns: minmax(0, 600px);
+  grid-template-rows: 1fr;
+  margin: 0 auto;
+}
+
+.why-choose-us__item {
+  background-color: v.$color-grey-light;
+  padding: 3rem;
+  border-radius: 1.5rem;
+}
+
+.why-choose-us__item-title {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 875px) {
+  .why-choose-us__container {
+    grid-template-columns: repeat(2, minmax(0, 600px));
+  }
+}

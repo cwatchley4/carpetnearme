@@ -1,0 +1,63 @@
+@use "../abstracts/variables" as v;
+
+@font-face {
+  font-family: "GoBold";
+  src: url("../assets/fonts/gobold-regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../assets/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../assets/fonts/Nunito-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Font variables in abstracts/_variables.scss
+
+body {
+  font-family: v.$font-family-primary;
+  font-weight: v.$font-weight-regular;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: v.$font-family-heading;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+p {
+  font-family: v.$font-family-primary;
+  font-size: 1.8rem;
+}

@@ -1,0 +1,132 @@
+@use "../abstracts/variables" as v;
+
+.btn {
+  position: relative;
+  background: linear-gradient(to bottom right, v.$color-primary, #7c8f9b);
+  color: v.$color-white;
+  border-radius: 1rem;
+  padding: 1rem 1.2rem;
+  display: inline-block;
+  text-align: center;
+  font-family: v.$font-family-heading;
+  letter-spacing: 2px;
+  border: none;
+  overflow: hidden;
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 1;
+  font-size: 2rem;
+  width: fit-content;
+
+  &--book {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: left;
+    width: fit-content;
+  }
+
+  &--phone-num {
+    transition: 0.2s ease;
+    letter-spacing: 0.2rem;
+    width: 15rem;
+    font-size: 1.5rem;
+  }
+
+  &--mobile-nav-btn {
+    font-size: 1.5rem;
+  }
+
+  &--mobile-nav-link {
+    background-color: v.$color-primary;
+    color: v.$color-white;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+  }
+
+  &--modal {
+    position: relative;
+    background-color: v.$color-primary;
+    color: v.$color-white;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+    overflow: hidden;
+  }
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom right, #7c8f9b, v.$color-primary);
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
+  opacity: 0;
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+#eapps-google-reviews-4c722016-2414-453b-a786-c507ec72b77f
+  > div
+  > div
+  > div
+  > div.WidgetBackground__ContentContainer-sc-1ho7q3r-1.jUKeJm
+  > div
+  > div
+  > div.LoadMoreButton__Container-sc-99duct-0.iZfSoz.es-load-more-button-container
+  > button
+  > span {
+  position: relative;
+  background: linear-gradient(to bottom right, v.$color-primary, #7c8f9b);
+  color: v.$color-white;
+  border-radius: 1rem !important;
+  padding: 1rem 1.2rem;
+  display: inline-block;
+  text-align: center;
+  font-family: v.$font-family-heading;
+  letter-spacing: 2px;
+  border: none;
+  overflow: hidden;
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 1;
+}
+
+#eapps-google-reviews-4c722016-2414-453b-a786-c507ec72b77f
+  > div
+  > div
+  > div
+  > div.WidgetBackground__ContentContainer-sc-1ho7q3r-1.jUKeJm
+  > div
+  > div
+  > div.LoadMoreButton__Container-sc-99duct-0.iZfSoz.es-load-more-button-container
+  > button {
+  background-color: v.$color-white !important;
+}
+
+#eapps-google-reviews-4c722016-2414-453b-a786-c507ec72b77f
+  > div
+  > div
+  > div
+  > div.WidgetBackground__ContentContainer-sc-1ho7q3r-1.jUKeJm
+  > div
+  > div
+  > div.LoadMoreButton__Container-sc-99duct-0.iZfSoz.es-load-more-button-container
+  > button::hover {
+  transform: scale(1.05);
+}

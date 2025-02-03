@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include m.layout-section-padding;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+
+#eapps-google-reviews-4c722016-2414-453b-a786-c507ec72b77f
+  > div
+  > div
+  > div
+  > div.WidgetBackground__ContentContainer-sc-1ho7q3r-1.jUKeJm
+  > div
+  > div
+  > div.WidgetTitle__Container-sc-j91g46-0.jOACPc.es-widget-title-container {
+  display: none;
+}
+
+.reviews #eapps-google-reviews-4c722016-2414-453b-a786-c507ec72b77f > div {
+  margin: auto;
+}

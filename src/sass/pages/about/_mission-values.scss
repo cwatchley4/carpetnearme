@@ -1,0 +1,55 @@
+@use "../../abstracts/variables" as v;
+
+.mission-values {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-values__container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(300px, 500px));
+  grid-template-rows: 300px 300px;
+}
+
+.mission-values__mission,
+.mission-values__values {
+  background-color: v.$color-grey-light;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mission-values__mission-title,
+.mission-values__values-title {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.about__img1 {
+  background-image: url(../assets/images/about-img1.webp);
+  background-size: cover;
+  border-radius: 10px;
+  height: 300px;
+}
+
+.about__img2 {
+  background-image: url(../assets/images/about-img2.webp);
+  background-size: cover;
+  border-radius: 10px;
+  height: 300px;
+}
+
+@media (max-width: 775px) {
+  .mission-values__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+  .about__img2 {
+    order: -1;
+  }
+}
